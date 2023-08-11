@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static void showYears(int year) {
@@ -45,5 +46,20 @@ public class Main {
 
     }
 
+    public static void overcomeTheDistance(int deliveryDistance) {
+        if (deliveryDistance <= 20) {
+            System.out.println("Потребуется 1 день.");
+        } else if (deliveryDistance >= 21 && deliveryDistance <= 60) {
+            System.out.println("Потребуется 2 дня");
+        } else if (deliveryDistance >= 61 && deliveryDistance <= 100) {
+            System.out.println("Потребуется 3 дня");
+        } else if (deliveryDistance > 100) {
+            System.out.println("Доставка нет производится");
+        }
+    }
 
+    public static void task3() {
+        int deliveryDistance = 10;
+        overcomeTheDistance(deliveryDistance);
+    }
 }
