@@ -46,26 +46,24 @@ public class Main {
 
     }
 
-    public static int overcomeTheDistance(int deliveryDistance, int day) {
+    public static int overcomeTheDistance(int deliveryDistance) {
+        int day = 0;
         if (deliveryDistance <= 20) {
             day = day + 1;
-            System.out.println("Потребуется день: " + day);
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             day = day + 2;
-            System.out.println("Потребуется день: " + day);
         } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             day = day + 3;
-            System.out.println("Потребуется дня: " + day);
         } else if (deliveryDistance > 100) {
-            System.out.println("Доставка нет производится");
+            day =-1;
         }
         return day;
     }
 
     public static void task3() {
         System.out.println("Задача 3");
-        int deliveryDistance = 43;
-        int day = 0;
-        overcomeTheDistance(deliveryDistance, day);
+        int deliveryDistance = 30;
+        overcomeTheDistance(deliveryDistance);
+        System.out.println("Потребуется дней: " +  overcomeTheDistance(deliveryDistance) + " срок доставки");
     }
 }
